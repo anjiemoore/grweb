@@ -1,8 +1,11 @@
 <template>
   <div>
-    <div class="about-image-container">
-      <img src="../assets/svgs/left-arrow.svg" />
-      <div class="about-image-text" v-html="headerImageText"></div>
+    <div class="card-container">
+      <img class="card-image" :src="cardImage" />
+      <div class="card-text">
+        <h5 class="card-title" v-html="cardTitle"></h5>
+        <p class="card-body" v-html="cardBody"></p>
+      </div>
     </div>
   </div>
 </template>
@@ -10,7 +13,9 @@
 export default {
   name: "Card",
   props: {
-    headerImageText: String,
+    cardImage: String,
+    cardTitle: String,
+    cardBody: String,
   },
 };
 </script>
