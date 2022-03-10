@@ -1,7 +1,8 @@
 <template>
   <div class="header-container">
+    <HeaderSlideshow></HeaderSlideshow>
     <div class="header-first-paragraph">
-      <h1>RESEARCH <span class="blue">SERVICES</span></h1>
+      <h2>RESEARCH <span class="blue">SERVICES</span></h2>
       <div class="header-paragraph-container">
         <p>
           Our research is uniquely designed with your company in mind and our
@@ -40,6 +41,7 @@
 </template>
 
 <script>
+import HeaderSlideshow from "@/components/HeaderSlideshow.vue";
 import FeatureCard from "../components/FeatureCard.vue";
 import Footer from "../components/Footer.vue";
 // import Quotes from "../components/Quotes.vue";
@@ -49,6 +51,7 @@ export default {
   components: {
     Footer,
     FeatureCard,
+    HeaderSlideshow,
     // Quotes,
   },
 };
