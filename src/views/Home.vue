@@ -31,7 +31,9 @@
     </div> -->
     <div class="header-possibilites-section">
       <h2>DISCOVER THE<span class="blue">possibilites</span></h2>
-      <FeatureCard></FeatureCard>
+      <div class="header-card-container">
+        <FeatureCard></FeatureCard>
+      </div>
     </div>
     <Footer></Footer>
   </div>
@@ -95,7 +97,7 @@ p {
   text-align: center;
 }
 .header-paragraph-container {
-  padding: 15px 0;
+  padding: 15px 18px;
 }
 .header-demo-cta {
   /* width: 70%; */
@@ -144,5 +146,9 @@ a {
   line-height: 1.2;
   text-align: center;
   text-decoration: none;
+}
+
+.header-card-container {
+  padding: 30px 10px;
 }
 </style>

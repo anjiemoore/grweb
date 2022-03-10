@@ -88,7 +88,11 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  padding: 0 21px;
+  /* padding: 0 21px; */
+}
+
+.links {
+  letter-spacing: 0px !important;
 }
 a {
   letter-spacing: 1.3px;
