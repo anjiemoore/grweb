@@ -9,7 +9,7 @@
             <figcaption>{{ quotes.credit }} <br /></figcaption>
           </div>
           <div class="quote-arrows">
-            <img
+            <button
               class="quote-arrow-left"
               src="../assets/svgs/left-arrow.svg"
               alt=""
@@ -31,8 +31,7 @@ export default {
         {
           quote:
             "We highly recommend Guest Research's Net Promoter System. Their software is powerful, yet easy to use, and their team has worked closely with us to significantly increase our guest and meeting planner satisfaction and loyalty.",
-          image:
-            "https://image.freepik.com/free-photo/image-human-brain_99433-298.jpg",
+          image: "../assets/companies/crystal-mtn.jpg",
           alt: "Pinehurst logo",
           credit: "Scott Brewton",
           position:

@@ -2,7 +2,7 @@
   <div>
     <div class="about-image-container">
       <img src="../assets/stock-images/pexels-james-wheeler-417074.jpg" />
-      <div class="about-image-text" v-html="headerImageText"></div>
+      <div class="about-image-text"><h1 v-html="headerImageText"></h1></div>
     </div>
   </div>
 </template>
@@ -16,33 +16,13 @@ export default {
 </script>
 
 <style scoped>
-.about-image-container {
-  width: 100%;
-  position: relative;
-  text-align: center;
-  color: white;
-}
-
-.about-image-text {
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 42px;
-  font-family: "Impact";
-  color: #fff;
-  text-transform: uppercase;
-  line-height: 0.223;
-  text-shadow: 2px 2px 12px black;
-}
 * {
   margin: 0 auto;
 }
 h1 {
   font-size: 42px;
   font-family: "Impact";
-  color: #358ddd;
+  color: #fff;
   text-transform: uppercase;
   line-height: 0.223;
   padding: 20px 0;
@@ -73,5 +53,25 @@ img {
 
 .about-container {
   padding: 0 18px;
+}
+.about-image-container {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.about-image-text {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 42px;
+  font-family: "Impact";
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 0.223;
+  text-shadow: 2px 2px 12px black;
 }
 </style>
