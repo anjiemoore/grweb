@@ -15,10 +15,11 @@
 export default {
   name: "Card",
   props: {
-    cardImage: String,
+    cardImage: Function,
     cardTitle: String,
     cardBody: String,
   },
+  computed: {},
 };
 </script>
 
@@ -53,17 +54,24 @@ p {
   flex-direction: column;
   width: 80%;
   height: 260px;
-  /* border: 2px solid pink; */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 15px 15px 0;
 }
 
 .card-image {
-  width: 60px;
-  height: 60px;
+  width: 25%;
+  height: 30%;
+  color: #34c6a6;
+  fill: #34c6a6;
+  filter: invert(62%) sepia(52%) saturate(492%) hue-rotate(117deg)
+    brightness(94%) contrast(94%);
 }
 .card-text {
   text-align: left;
   padding-top: 10px;
+}
+img {
+  width: 100%;
+  height: 100%;
 }
 </style>

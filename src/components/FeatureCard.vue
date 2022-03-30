@@ -1,5 +1,11 @@
 <template>
-  <swiper :navigation="true" :modules="modules" :loop="true" class="mySwiper">
+  <swiper
+    :navigation="true"
+    :modules="modules"
+    :loop="true"
+    :breakpoints="swiperOptions.breakpoints"
+    class="mySwiper"
+  >
     <swiper-slide>
       <card
         :cardImage="cardImage1"
@@ -52,22 +58,29 @@ export default {
   },
   data() {
     return {
-      cardImage1: "https://via.placeholder.com/80",
+      cardImage1: require(`@/assets/svgs/feedback2.svg`),
       cardTitle1: `<span style="color: #34C6A6;">Realtime</span><br>Feedback`,
       cardBody1:
         "Real-time feedback supports continuous improvement throughout your organization",
-      cardImage2: "https://via.placeholder.com/80",
+      cardImage2: require(`@/assets/svgs/loyalty.svg`),
       cardTitle2: `<span style="color: #34C6A6;">Higher Satisfaction</span> and&nbsp;Loyalty`,
       cardBody2:
         "Continuous feedback and product enhancements create higher satisfaction and loyalty",
-      cardImage3: "https://via.placeholder.com/80",
+      cardImage3: require(`@/assets/svgs/repeat2.svg`),
       cardTitle3: `<span style="color: #34C6A6;">Higher</span> Repeat and&nbsp;Referrals`,
       cardBody3:
         "Higher satisfaction and loyalty produce higher repeat and referral business",
-      cardImage4: "https://via.placeholder.com/80",
-      cardTitle4: `<span style="color: #44C6A6;">Higher</span> Revenues and&nbsp;Profits`,
+      cardImage4: require(`@/assets/svgs/profits2.svg`),
+      cardTitle4: `<span style="color:#34C6A6;">Higher</span> Revenues and&nbsp;Profits`,
       cardBody4:
         "Higher repeat business and referrals are the keys to higher revenues and profits",
+      swiperOptions: {
+        breakpoints: {
+          700: {
+            slidesPerView: 4,
+          },
+        },
+      },
     };
   },
   setup() {
@@ -106,5 +119,13 @@ export default {
   color: #4fc0a7 !important;
   fill: #4fc0a7 !important;
   stroke: #4fc0a7 !important;
+}
+@media only screen and (min-width: 700px) {
+  /deep/ .swiper-button-prev {
+    display: none;
+  }
+  /deep/ .swiper-button-next {
+    display: none;
+  }
 }
 </style>

@@ -14,24 +14,26 @@
     </div>
     <div class="header-who-we-are-section">
       <div class="header-who-we-are-text">
-        <span class="black-text">Who We Are</span>
-        <h2>
-          OUR SERVICES ARE UNCONDITIONALLY<br /><span class="blue"
-            >GUARANTEED</span
-          >
-        </h2>
-        <router-link to="/about">Learn More</router-link>
+        <div class="who-we-are-text-wrapper">
+          <span class="black-text">Who We Are</span>
+          <h2>
+            OUR SERVICES ARE UNCONDITIONALLY<br /><span class="blue"
+              >GUARANTEED</span
+            >
+          </h2>
+          <router-link to="/about">Learn More</router-link>
+        </div>
       </div>
       <div class="header-who-we-are-image">
         <img src="../assets/revenue.png" />
       </div>
     </div>
-    <!-- <div class="header-about-us-section">
+    <div class="header-about-us-section">
       <h2>WHAT OUR CLIENTS <span class="blue">ARE SAYING</span></h2>
       <Quotes></Quotes>
-    </div> -->
+    </div>
     <div class="header-possibilites-section">
-      <h2>DISCOVER THE<span class="blue">possibilites</span></h2>
+      <h2>DISCOVER THE<span class="blue">&nbsp;possibilites</span></h2>
       <div class="header-card-container">
         <FeatureCard></FeatureCard>
       </div>
@@ -44,7 +46,7 @@
 import HeaderSlideshow from "@/components/HeaderSlideshow.vue";
 import FeatureCard from "../components/FeatureCard.vue";
 import Footer from "../components/Footer.vue";
-// import Quotes from "../components/Quotes.vue";
+import Quotes from "../components/Quotes.vue";
 
 export default {
   name: "Home",
@@ -52,7 +54,7 @@ export default {
     Footer,
     FeatureCard,
     HeaderSlideshow,
-    // Quotes,
+    Quotes,
   },
 };
 </script>
@@ -95,6 +97,9 @@ p {
 .header-container {
   width: 100%;
   padding-bottom: 20px;
+  background-image: url("../assets/hp-bg.png") !important;
+  background-repeat: no-repeat;
+  background-position-x: right;
 }
 .header-first-paragraph {
   text-align: center;
@@ -153,5 +158,30 @@ a {
 
 .header-card-container {
   padding: 30px 10px;
+}
+@media only screen and (min-width: 700px) {
+  p {
+    font-size: 14px;
+  }
+  .header-paragraph-container {
+    width: 500px;
+  }
+  .header-who-we-are-section {
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+  .header-who-we-are-image img {
+    padding: 0;
+  }
+
+  .header-who-we-are-text {
+    min-width: 50%;
+    text-align: left;
+  }
+  .who-we-are-text-wrapper {
+    width: 500px;
+    margin: 0;
+  }
 }
 </style>

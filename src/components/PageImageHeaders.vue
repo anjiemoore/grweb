@@ -41,11 +41,6 @@ li {
 }
 
 img {
-  /* display: block;
-  max-width: 100%;
-  max-height: 40%;
-  width: auto;
-  height: auto; */
   object-fit: cover;
   width: 100%;
   height: 150px;
@@ -67,11 +62,14 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 42px;
-  font-family: "Impact";
-  color: #fff;
-  text-transform: uppercase;
-  line-height: 0.223;
-  text-shadow: 2px 2px 12px black;
+}
+@media only screen and (min-width: 700px) {
+  img {
+    height: 350px;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
+    <router-link to="/">Home</router-link>
     <router-link to="/about">About</router-link>
     <router-link to="/different">Difference</router-link>
     <router-link to="/nps">NpsSystems</router-link>
@@ -21,7 +21,8 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  /* padding: 0 18px; */
+  background-image: url("./assets/bg-mobile2.png");
+  background-repeat: no-repeat;
 }
 
 #nav {
@@ -35,5 +36,14 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+
+@media only screen and (min-width: 700px) {
+  #app {
+    background-image: url("./assets/bg-desktop.png");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: right;
+  }
 }
 </style>

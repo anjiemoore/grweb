@@ -14,16 +14,16 @@
       class="mySwiper"
     >
       <swiper-slide>
-        <img src="../assets/header-images/resort.jpg" />
+        <img src="@/assets/header-images/resort.jpg" />
       </swiper-slide>
       <swiper-slide>
-        <img src="../assets/header-images/golf.jpg" />
+        <img src="@/assets/header-images/golf.jpg" />
       </swiper-slide>
       <swiper-slide>
-        <img src="../assets/header-images/snow.jpg" />
+        <img src="@/assets/header-images/snow.jpg" />
       </swiper-slide>
       <swiper-slide>
-        <img src="../assets/header-images/water.jpg" />
+        <img src="@/assets/header-images/water.jpg" />
       </swiper-slide>
     </swiper>
   </div>
@@ -59,9 +59,17 @@ export default {
 
 <style scoped>
 .swiper {
-  height: 100%;
+  /* height: 600px; */
   width: 100%;
   /* border: 1px solid #000; */
+}
+
+@media (min-width: 768px) {
+  .swiper {
+    height: 500px;
+    width: 100%;
+    border: 1px solid #000;
+  }
 }
 
 .header-slideshow-container {
@@ -84,5 +92,8 @@ export default {
 
 img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
 }
 </style>

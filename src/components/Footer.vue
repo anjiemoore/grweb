@@ -20,12 +20,12 @@
       <p>5500 S. Krameria Street | Greenwood Village, CO 80111</p>
     </div>
     <div class="footer-menu">
-      <router-link to="/">HOME</router-link>
-      <router-link to="/about">WHO WE ARE</router-link>
-      <router-link to="/different">HOW WE’RE DIFFERENT</router-link>
-      <router-link to="">FEATURES</router-link>
-      <router-link to="">THE TEAM</router-link>
-      <router-link to="">GET IN TOUCH</router-link>
+      <router-link to="/" name="top">HOME</router-link>
+      <router-link to="/about" name="top">WHO WE ARE</router-link>
+      <router-link to="/different" name="top">HOW WE’RE DIFFERENT</router-link>
+      <router-link to="" name="top">FEATURES</router-link>
+      <router-link to="" name="top">THE TEAM</router-link>
+      <router-link to="" name="top">GET IN TOUCH</router-link>
     </div>
     <div class="footer-copyright">
       <p>© Guest Research, Inc.<br />All Right Reserved Privacy Policy</p>
@@ -113,6 +113,17 @@ p {
   line-height: 1.2;
   text-align: center;
   text-decoration: none;
+}
+
+@media only screen and (min-width: 700px) {
+  .footer-container {
+    width: 50%;
+    padding: 0 18px;
+  }
+
+  .footer-cta {
+    width: 350px;
+  }
 }
 </style>
 >
